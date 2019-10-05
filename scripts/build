@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+cd $(dirname $0)/..
+
+md5sum --check --quiet data/free/hashes || exit 1
+
+docker build --network host -t quake2_server:latest .
