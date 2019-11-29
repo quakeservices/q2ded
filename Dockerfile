@@ -7,7 +7,7 @@ RUN mkdir -p /opt/quake2
 
 COPY ./data/nonfree/baseq2 /opt/quake2/baseq2
 COPY ./data/nonfree/ctf    /opt/quake2/ctf
-COPY ./data/nonfree/rogue  /opt/quake2/rogue
+# COPY ./data/nonfree/rogue  /opt/quake2/rogue
 COPY ./data/nonfree/xatrix /opt/quake2/xatrix
 
 RUN apt-get update -y && \
