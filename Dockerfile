@@ -31,9 +31,9 @@ RUN cp /opt/yquake2-QUAKE2_$yquake_version/release/ref_gl3.so     /opt/quake2/re
 RUN cp /opt/yquake2-QUAKE2_$yquake_version/release/ref_soft.so    /opt/quake2/ref_soft.so
 RUN cp /opt/yquake2-QUAKE2_$yquake_version/release/baseq2/game.so /opt/quake2/baseq2/game.so
 
-COPY ./data/free/maps       /opt/quake2/baseq2/maps
-COPY ./data/free/config.cfg /opt/quake2/baseq2/config.cfg
-COPY ./data/free/maps.lst   /opt/quake2/baseq2/maps.lst
+COPY ./data/free/maps         /opt/quake2/baseq2/maps
+COPY ./data/free/autoexec.cfg /opt/quake2/baseq2/autoexec.cfg
+COPY ./data/free/maps.lst     /opt/quake2/baseq2/maps.lst
 
 RUN chown -R quake:quake /opt/quake2
 
