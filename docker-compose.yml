@@ -1,10 +1,10 @@
-version: '3.3'
+---
+version: '3.8'
 
 services:
   quake2:
-    image: quake2_server:latest
-    command: ["/opt/quake2/run_ded.sh"]
+    image: q2ded:latest
     restart: always
     ports:
-    - "27910:27910/udp"
-    - "27910:27910/tcp"
+      - "27910:27910/udp"
+      - "27910:27910/tcp"

@@ -1,14 +1,11 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-cd $(dirname $0)/..
+cd "$(git rev-parse --show-toplevel)" || exit
 
-md5sum --check --quiet data/free/hashes || exit 1
+md5sum --check \
+       --quiet \
+       --ignore-missing \
+       ./hashes || exit 1
 
-if which docker 2>/dev/null; then
-  cmd="docker"
-else
-  cmd="podman"
-fi
-
-${cmd} build --network host -t quake2_server:latest .
+DOCKER_BUILDKIT=1 docker build --network host -t q2ded:latest .
