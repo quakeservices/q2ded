@@ -3,7 +3,7 @@ version: '3.8'
 
 services:
   quake2:
-    image: q2ded:latest
+    image: q2ded:yquake2
     restart: always
     ports:
       - "27910:27910/udp"
