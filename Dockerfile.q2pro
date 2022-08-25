@@ -37,4 +37,4 @@ COPY --chown=quake:quake \
 
 USER quake
 
-CMD ["/usr/local/share/q2pro/q2ded"]
+CMD ["/usr/local/bin/q2proded"]
